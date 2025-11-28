@@ -1,9 +1,6 @@
 
 
 	public class NumberCard extends Card{
-
-		public enum Number {
-			zero,one,two,three,four,five,six,seven,eight,nine}
 		//the attributs
 	   private Number number;
 	   //the constractor
@@ -18,8 +15,14 @@
 		 //if the left side is false java will not verifie the right side//
 		return this.color==card.color ||(card instanceof NumberCard&&((NumberCard)card).number==this.number);
 	   } 
-	   //the aplay effect 
-
+	
+	   public Number getNumber() {
+		return this.number;
+		   
+	   }
+	   public String toString() {
+	        return color.toString() + " " + number;
+	    }
 	}
 
 

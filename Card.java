@@ -5,8 +5,6 @@ public abstract class Card {
 
 	}
 
-	public enum Color {
-	    red,blue,green,yellow,noColor}
 	    //But we’ll need logic later to let the player choose a color when playing a Wild
 	protected Color color;
     

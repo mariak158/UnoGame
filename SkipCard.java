@@ -1,5 +1,5 @@
 
-public class SkipCard extends Card {
+public class SkipCard extends Card implements Actionable {
 
 
 	@Override
@@ -7,5 +7,14 @@ public class SkipCard extends Card {
 		
 		return this.color == card.getColor()||card instanceof SkipCard;
 	}
+
+	@Override
+	public void applyEffect(Game game, Player player) {
+		// depend on the game the next palyer 
+		
+	}
+	public String toString() {
+        return this.color.toString() + " Skip";
+    }
 
 }
