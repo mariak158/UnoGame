@@ -1,52 +1,73 @@
-
-
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Player {
 
-  private ArrayList<Card> hand; 
+    private ArrayList<Card> hand; 
     private String name;
 
     public Player(String name) {
         this.name = name;
         this.hand = new ArrayList<>();
     }
+
     public String getName() {
         return name;
     }
-    public int getCardCount() {
+
+    public int getCardCount() { 
         return hand.size();
     }
+
     public ArrayList<Card> getHand() {
-        return hand;   //not done yet  possible cards li y9dro ytla3bo 
+        return hand;
     }
-    public void drawCard(Card deckTop) {
-        hand.add(deckTop);
+
+    public void drawCard(Card card) {
+        hand.add(card);
     }
-    // yn7I UNEcart ml player hand
-    public Card playCard(int index) {
-        return hand.remove(index);
+
+    public Card playCard(int index) { 
+        return hand.remove(index); 
     }
-    
-    public boolean hasWon() {
+
+    public boolean hasWon() {   
         return hand.isEmpty();
     }
-    
+
     public void sayUno() {
         if (hand.size() == 1) {
-            System.out.println(name + "UNO");
+            System.out.println(name + " says UNO!");
         }
     }
+
     public void showCards() {
         System.out.println(name + "'s Cards:");
         for (int i = 0; i < hand.size(); i++) {
             System.out.println((i + 1) + ") " + hand.get(i));
         }
     }
-    
+
+    @Override
     public String toString() {
         return name;
     }
-    
-    // mayby add a method that abel the player the chose the color he want to insert in the wild card 
+
+    public Color chooseColor(Scanner scanner) {
+        System.out.println("Choose a color: 1) RED 2) BLUE 3) GREEN 4) YELLOW");
+        int choice = -1;
+        while (true) {
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+                if (choice >= 1 && choice <= 4) break;
+            } catch (Exception e) {}
+            System.out.println("Invalid choice. Try again:");
+        }
+        switch (choice) {
+            case 1: return Color.red;
+            case 2: return Color.blue;
+            case 3: return Color.green;
+            default: return Color.yellow;
+        }
+    }
 }

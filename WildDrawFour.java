@@ -1,17 +1,21 @@
+public class WildDrawFour extends Wild implements Actionable {
 
-public class WildDrawFour extends Wild implements Actionable{
+    @Override
+    public void applyEffect(Game game, Player player) {
+        Player next = game.getNextPlayer();
+        for (int i = 0; i < 4; i++) {
+            next.drawCard(game.getDeck().draw());
+        }
+        game.skipNextPlayer();
+    }
 
-	@Override
-	public void applyEffect(Game game, Player player) {
-		//chose the color ...
-		// next player  add 4
-		for(int i=0 ; i<4; i++) {
-			//nextplayer.drawCard(game.deck);
-		}
-		
-	}
-	public String toString() {
+    @Override
+    public String toString() {
         return "Wild Draw Four";
     }
 
+    @Override
+    protected void setColor(Color chosenColor) {
+        this.color = chosenColor;
+    }
 }
