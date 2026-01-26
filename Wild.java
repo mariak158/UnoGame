@@ -1,7 +1,9 @@
 
 public class Wild extends Card implements Actionable{
 
-
+	public Wild() {
+        this.color = Color.noColor;
+    }
 	@Override
 	public boolean canBePlayed(Card card) {
 		

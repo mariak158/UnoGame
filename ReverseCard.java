@@ -1,6 +1,9 @@
 
 public class ReverseCard extends Card implements Actionable {
 
+	public ReverseCard(Color color) {
+	    this.color = color;
+	}
 	@Override
 	public boolean canBePlayed(Card card) {
 		

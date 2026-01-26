@@ -1,6 +1,8 @@
 
 public class SkipCard extends Card implements Actionable {
-
+	  public SkipCard(Color color) {
+	        this.color = color;
+	    }
 
 	@Override
 	public boolean canBePlayed(Card card) {

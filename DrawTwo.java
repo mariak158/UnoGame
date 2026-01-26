@@ -1,6 +1,9 @@
 
 public class DrawTwo extends Card  implements Actionable{
 
+	public DrawTwo(Color color) {
+        this.color = color;
+    }
 	@Override
 	public boolean canBePlayed(Card card) {
 		

@@ -1,12 +1,9 @@
 
 
 public abstract class Card {
-	public class Number {
-
-	}
 
 	    //But we’ll need logic later to let the player choose a color when playing a Wild
-	protected Color color;
+	protected  Color color;
     
    public abstract boolean canBePlayed(Card card);
 

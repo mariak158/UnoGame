@@ -18,17 +18,20 @@ public class Player {
         return hand.size();
     }
     public ArrayList<Card> getHand() {
-        return hand;   //possible cards li lzm ythato
+        return hand;   //not done yet  possible cards li y9dro ytla3bo 
     }
-    public void drawCard(Card c) {
-        hand.add(c);
+    public void drawCard(Card deckTop) {
+        hand.add(deckTop);
     }
+    // yn7I UNEcart ml player hand
     public Card playCard(int index) {
         return hand.remove(index);
     }
+    
     public boolean hasWon() {
         return hand.isEmpty();
     }
+    
     public void sayUno() {
         if (hand.size() == 1) {
             System.out.println(name + "UNO");
@@ -40,13 +43,10 @@ public class Player {
             System.out.println((i + 1) + ") " + hand.get(i));
         }
     }
-    public void hideCards() {
-        System.out.println(name + "'s Cards:");
-        for (int i = 0; i < hand.size(); i++) {
-            System.out.println((i + 1) + ") [ HIDDEN CARD ]");
-        }
-    }
+    
     public String toString() {
         return name;
     }
+    
+    // mayby add a method that abel the player the chose the color he want to insert in the wild card 
 }
