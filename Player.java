@@ -14,7 +14,7 @@ public class Player {
     public String getName() {
         return name;
     }
-
+// i think name gethandcount bettre
     public int getCardCount() { 
         return hand.size();
     }
@@ -22,7 +22,7 @@ public class Player {
     public ArrayList<Card> getHand() {
         return hand;
     }
-
+ //card is the top of the deck
     public void drawCard(Card card) {
         hand.add(card);
     }

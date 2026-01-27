@@ -6,7 +6,6 @@ public class WildDrawFour extends Wild implements Actionable {
         for (int i = 0; i < 4; i++) {
             next.drawCard(game.getDeck().draw());
         }
-        game.skipNextPlayer();
     }
 
     @Override

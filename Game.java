@@ -17,7 +17,7 @@ public class Game {
         distributeCards();
         this.currentCard = deck.draw();
     }
-
+    //for each player we give them 7 cards
     public void distributeCards() {
         for (Player player : players) {
             for (int i = 0; i < 7; i++) {
@@ -39,7 +39,7 @@ public class Game {
 
         while (true) {
             Player player = players.get(currentPlayerIndex);
-
+            System.out.println("------round------");
             System.out.println("\nCurrent card: " + currentCard);
             System.out.println(player.getName() + "'s turn");
 
