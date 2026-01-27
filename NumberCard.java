@@ -20,7 +20,7 @@ public class NumberCard extends Card {
     public String toString() {
         return color + " " + number;
     }
-
+      
     @Override
     protected void setColor(Color chosenColor) {
         this.color = chosenColor;

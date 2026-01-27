@@ -11,7 +11,7 @@ public class Wild extends Card implements Actionable {
 
     @Override
     public void applyEffect(Game game, Player player) {
-        // color already chosen in Game
+    //chose the color in the game
     }
 
     @Override
@@ -19,6 +19,7 @@ public class Wild extends Card implements Actionable {
         if (color == Color.noColor) {
             return "Wild";
         }
+        //to print the chosen color in the game
         return "Wild (" + color + ")";
     }
 

@@ -8,6 +8,5 @@ public abstract class Card {
         return this.color;
     }
 
-    // every card must implement this
     protected abstract void setColor(Color chosenColor);
 }

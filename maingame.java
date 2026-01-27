@@ -7,9 +7,20 @@ public class maingame {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Player> players = new ArrayList<>();
 
-        System.out.print("Enter number of players: ");
-        int n = scanner.nextInt();
-        scanner.nextLine(); 
+        int n = 0;
+        while (true) {
+            System.out.print("Enter number of players: ");
+            try {
+                n = Integer.parseInt(scanner.nextLine()); 
+                if (n >= 2 && n <= 10) { 
+                    break;
+                } else {
+                    System.out.println("Please enter a number between 2 and 10.");
+                }
+            } catch (Exception e) {
+                System.out.println("Invalid input. Please enter a number.");
+            }
+        }
 
         for (int i = 0; i < n; i++) {
             System.out.print("Enter name for player " + (i + 1) + ": ");
@@ -21,5 +32,3 @@ public class maingame {
         game.start();
     }
 }
-		
-		

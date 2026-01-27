@@ -58,7 +58,8 @@ public class Player {
         int choice = -1;
         while (true) {
             try {
-                choice = Integer.parseInt(scanner.nextLine());
+            	String input = scanner.nextLine();   //scan a text  
+            	choice = Integer.parseInt(input);    // n7awloh l integer bhad syntax
                 if (choice >= 1 && choice <= 4) break;
             } catch (Exception e) {}
             System.out.println("Invalid choice. Try again:");
