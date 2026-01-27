@@ -64,11 +64,19 @@ public class Player {
             } catch (Exception e) {}
             System.out.println("Invalid choice. Try again:");
         }
+        
+             // i add a discreption,,
         switch (choice) {
-            case 1: return Color.red;
-            case 2: return Color.blue;
-            case 3: return Color.green;
-            default: return Color.yellow;
+            case 1: System.out.println(name + " chose the color: " + Color.red);
+                    return Color.red;
+            case 2: System.out.println(name + " chose the color: " + Color.blue);
+            	    return Color.blue;
+            case 3: System.out.println(name + " chose the color : " + Color.blue);
+            	    return Color.green;
+            	    
+            default: System.out.println(name + " chose the color: " + Color.yellow);
+            	    return Color.yellow;
+            
         }
     }
 }

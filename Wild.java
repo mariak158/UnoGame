@@ -12,6 +12,8 @@ public class Wild extends Card implements Actionable {
     @Override
     public void applyEffect(Game game, Player player) {
     //chose the color in the game
+    	System.out.println(player.getName() + " played a Wild card");
+
     }
 
     @Override

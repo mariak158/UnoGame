@@ -48,6 +48,7 @@ public class Game {
 
             ArrayList<Card> hand = player.getHand();
             ArrayList<Card> playable = new ArrayList<>();
+            // prcourire toute hand pour construire playable array array of playable cards
             for (Card c : hand) {
                 if (c.canBePlayed(currentCard)) {
                     playable.add(c);
@@ -61,13 +62,13 @@ public class Game {
                 nextTurn();
                 continue;
             }
-
+            //loop to treat the card selection
             System.out.println("Select a card to play (number):");
             int choice = -1;
             while (true) {
                 try {
                     choice = Integer.parseInt(scanner.nextLine());
-                    if (choice >= 1 && choice <= playable.size()) break;
+                    if (choice >= 1 && choice <= playable.size()) break; //on sort du 
                     System.out.println("Invalid choice, try again:");
                 } catch (NumberFormatException e) {
                     System.out.println("Enter a number:");
@@ -82,15 +83,16 @@ public class Game {
                 playedCard.setColor(chosenColor);
             }
 
-            currentCard = playedCard;
-
+            currentCard = playedCard; // apdate th current card
+                  
+            player.sayUno(); 
             if (playedCard instanceof Actionable) {
                 ((Actionable) playedCard).applyEffect(this, player);
             }
 
             if (player.hasWon()) {
                 System.out.println(player.getName() + " wins!");
-                break;
+                break;//end of the game
             }
 
             nextTurn();
@@ -104,11 +106,11 @@ public class Game {
     public Deck getDeck() {
         return deck;
     }
-
+         // mosta3mala fi card skib applay effect
     public void skipNextPlayer() {
         nextTurn();
     }
-
+    //mosta3mala fi card
     public void reverseDirection() {
         direction = -direction;
     }

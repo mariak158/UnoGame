@@ -15,7 +15,8 @@ public class DrawTwo extends Card implements Actionable {
         for (int i = 0; i < 2; i++) {
             next.drawCard(game.getDeck().draw());
         }
-     
+        System.out.println(game.getNextPlayer().getName() + " draws 2 cards");
+
     }
 
     @Override

@@ -12,6 +12,8 @@ public class SkipCard extends Card implements Actionable {
     @Override
     public void applyEffect(Game game, Player player) {
         game.skipNextPlayer();
+        System.out.println(game.getNextPlayer().getName() + " is skipped");
+
     }
 
     @Override

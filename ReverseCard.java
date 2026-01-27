@@ -12,6 +12,8 @@ public class ReverseCard extends Card implements Actionable {
     @Override
     public void applyEffect(Game game, Player player) {
         game.reverseDirection();
+        System.out.println("Direction reversed");
+
     }
 
     @Override
